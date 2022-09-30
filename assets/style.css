@@ -1,0 +1,55 @@
+header{
+    background-color: rgb(31, 31, 110);
+    height: 4.5rem;
+    color:white;
+    text-align: center;
+}
+
+h1{
+    padding: 1rem;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.main-content {
+    flex: 1 1 75%;
+    padding: 15px;
+}
+
+.sidebar {
+    flex: 1 1 25%;
+    text-align: right;
+    padding: 20px;
+    background-color: grey;
+}
+
+#todays-weather-card{
+    width: 90%;
+    border: 5px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+
+#card-container{
+    display: flex;
+    flex: row;
+    grid-row: auto;
+    justify-content: space-between;
+}
+
+.future-card{
+    border: solid .5rem rgb(47, 26, 122);
+    padding: 10px;
+    background-color: rgb(47, 26, 122);
+    color:white;
+}
+
+.notFound{
+    grid-template-columns: 1fr!important;
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 100%;
+}

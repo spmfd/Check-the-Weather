@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <main class="flex-container">
+
+        <section class ="sidebar">
+            <h2>Search for City</h2>
+            <!-- Text Search Box -->
+            <input type="text" class="search-control" placeholder="Enter City Name Here!" id="search-input">
+            <button id="city-search">Search</button>
+            <div id="previous-search">
+
+            </div>
+        </section>
+    
+        <aside class="main-content">
+            <div id="todays-weather-card">
+                <h2 id="currentCity">
+                    Test Name - Date - Icon
+                </h2>
+                <p>Temperature: °F</p>
+                <p>Wind Speed: MPH</p>
+                <p>Humidity: %</p>
+            </div>
+            <br>
+            <p>5-day Forcast:</p>
+            <!-- Cards go Here -->
+            <div id="card-container">
+                <div class="future-card">
+                    <h3>Test Date</h3>
+                    <p>Icon Image Here :)</p>
+                    <p>Temperature: °F</p>
+                    <p>Wind Speed: MPH</p>
+                    <p>Humidity: %</p>
+                </div>
+                <div class="future-card">
+                    <h3>Test Date</h3>
+                    <p>Icon Image Here :)</p>
+                    <p>Temperature: °F</p>
+                    <p>Wind Speed: MPH</p>
+                    <p>Humidity: %</p>
+                </div>
+                <div class="future-card">
+                    <h3>Test Date</h3>
+                    <p>Icon Image Here :)</p>
+                    <p>Temperature: °F</p>
+                    <p>Wind Speed: MPH</p>
+                    <p>Humidity: %</p>
+                </div>
+                <div class="future-card">
+                    <h3>Test Date</h3>
+                    <p>Icon Image Here :)</p>
+                    <p>Temperature: °F</p>
+                    <p>Wind Speed: MPH</p>
+                    <p>Humidity: %</p>
+                </div>
+                <div class="future-card">
+                    <h3>Test Date</h3>
+                    <p>Icon Image Here :)</p>
+                    <p>Temperature: °F</p>
+                    <p>Wind Speed: MPH</p>
+                    <p>Humidity: %</p>
+                </div>
+
+            </div>
+        </aside>
+    <script src="./assets/javascript.js"></script>
+    </main>
+
+</body>
+</html>
