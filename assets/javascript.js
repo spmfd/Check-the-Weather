@@ -7,6 +7,7 @@ citySearchBtn.addEventListener('click', function(){
     let searchInputTxt = document.getElementById('search-input').value.trim();
     weather(searchInputTxt)
     forecastweather(searchInputTxt)
+    searchhistory(searchInputTxt)
 })
 
 function weather(searchInputTxt){
@@ -16,7 +17,7 @@ function weather(searchInputTxt){
         let html = "";
         html += `
                 <h2 id="currentCity">
-                ${searchInputTxt} - ${Date()}- Icon
+                ${searchInputTxt} - ${moment().format('MMM Do YY')}- Icon
                 </h2>
                 <p>Temperature: ${data.main.temp} °F</p>
                 <p>Wind Speed: ${data.wind.speed} MPH</p>
@@ -34,23 +35,53 @@ function forecastweather(searchInputTxt){
     .then(response => response.json())
     .then(data => {
         let html = "";
-        for(let i =0; i < data.list.length; i++){
-        html += `
+             html += `
         <div class="future-card">
-                    <h3 id="forecast-date"></h3>
+                    <h3 id="forecast-date">${moment().add(1, 'days').format('MMM Do YY')}</h3>
                     <p></p>
                     <p>Icon Image Here :)</p>
-                    <p>Temperature: ${data.list[i].main.temp} °F</p>
-                    <p>Wind Speed: ${data.list[i].wind.speed} MPH</p>
-                    <p>Humidity: ${data.list[i].main.humidity} %</p>
+                    <p>Temperature: ${data.list[0].main.temp} °F</p>
+                    <p>Wind Speed: ${data.list[0].wind.speed} MPH</p>
+                    <p>Humidity: ${data.list[0].main.humidity} %</p>
+        </div>
+        <div class="future-card">
+                <h3 id="forecast-date">${moment().add(2, 'days').format('MMM Do YY')}</h3>
+                <p></p>
+                <p>Icon Image Here :)</p>
+                <p>Temperature: ${data.list[1].main.temp} °F</p>
+                <p>Wind Speed: ${data.list[1].wind.speed} MPH</p>
+                <p>Humidity: ${data.list[1].main.humidity} %</p>
+        </div>
+        <div class="future-card">
+                <h3 id="forecast-date">${moment().add(3, 'days').format('MMM Do YY')}</h3>
+                <p></p>
+                <p>Icon Image Here :)</p>
+                <p>Temperature: ${data.list[2].main.temp} °F</p>
+                <p>Wind Speed: ${data.list[2].wind.speed} MPH</p>
+                <p>Humidity: ${data.list[2].main.humidity} %</p>
+        </div>
+        <div class="future-card">
+                <h3 id="forecast-date">${moment().add(4, 'days').format('MMM Do YY')}</h3>
+                <p></p>
+                <p>Icon Image Here :)</p>
+                <p>Temperature: ${data.list[3].main.temp} °F</p>
+                <p>Wind Speed: ${data.list[3].wind.speed} MPH</p>
+                <p>Humidity: ${data.list[3].main.humidity} %</p>
+        </div>
+        <div class="future-card">
+                <h3 id="forecast-date">${moment().add(5, 'days').format('MMM Do YY')}</h3>
+                <p></p>
+                <p>Icon Image Here :)</p>
+                <p>Temperature: ${data.list[4].main.temp} °F</p>
+                <p>Wind Speed: ${data.list[4].wind.speed} MPH</p>
+                <p>Humidity: ${data.list[4].main.humidity} %</p>
         </div>
         `;
-        var time = data.list[i].dt;
-        function milliseconds () {
-                var date = new Date(time)
-                forecastdate.innerHTML = date.toString();
-        }
-        forecastcity.innerHTML = html;
-        }})
-        milliseconds()
+            forecastcity.innerHTML = html;
+        })
+}
+
+function searchhistory(searchInputTxt){
+    localStorage.setItem("search", searchInputTxt);
+    document.getElementById("previous-search").innerHTML = localStorage.getItem("search");
 }
