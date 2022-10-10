@@ -12,8 +12,9 @@ My biggest challenge was figuring out how to make the local storage information 
 
 No installation necessary, please visit the following URL:
 
+https://spmfd.github.io/Check-the-Weather/
 
-
+![screenshot](./assets/website.png)
 
 
 ## Credits
