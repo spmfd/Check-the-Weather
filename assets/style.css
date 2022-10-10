@@ -9,6 +9,8 @@ h1{
     padding: 1rem;
 }
 
+/* Containers */
+
 .flex-container {
     display: flex;
 }
@@ -20,21 +22,14 @@ h1{
 
 .sidebar {
     flex: 1 1 25%;
-    text-align: right;
+    text-align: center;
     padding: 20px;
     background-color: grey;
-    height: 80vh;
+    height: 100vh;
 }
 
 #previous-search{
     text-align: center;
-}
-
-#todays-weather-card{
-    width: 90%;
-    border: 5px solid black;
-    padding: 20px;
-    margin: 20px;
 }
 
 #card-container{
@@ -44,6 +39,8 @@ h1{
     justify-content: space-between;
 }
 
+/* Card Styling */
+
 .future-card{
     border: solid .5rem rgb(47, 26, 122);
     padding: 10px;
@@ -51,10 +48,15 @@ h1{
     color:white;
 }
 
-.notFound{
-    grid-template-columns: 1fr!important;
-    color: black;
-    font-size: 1.8rem;
-    font-weight: 600;
-    width: 100%;
+#todays-weather-card{
+    width: 90%;
+    border: 5px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Previous Search Styling */
+
+li {
+    list-style-type: none;
 }
